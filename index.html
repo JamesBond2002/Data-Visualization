@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Data Visualization</h1>
-  <a href="played.html">Total Number of Games played</a>
-  <hr>
-  <a href="won.html">Total Number of Games won</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="layer">
+      <h1>Data Visualization</h1>
+      <div class="links">
+        <a href="played.html">Games played</a>
+        <a href="won.html">Games won</a>
+      </div>
+    </div>
+    <div class="img1">
+      <img src="/img/played.PNG" alt="" />
+    </div>
+    <div class="img2">
+      <img src="/img/won.PNG" alt="" />
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <script>
+      let charts = document.querySelector(".links").children;
+      charts[0].addEventListener("mouseenter", () => {
+        document.querySelector(".img1").style.opacity = 1;
+        document.querySelector(".box1").style.opacity = 1;
+      });
+      charts[0].addEventListener("mouseleave", () => {
+        document.querySelector(".img1").style.opacity = 0;
+        document.querySelector(".box1").style.opacity = 0;
+      });
+      charts[1].addEventListener("mouseenter", () => {
+        document.querySelector(".img2").style.opacity = 1;
+        document.querySelector(".box2").style.opacity = 1;
+      });
+      charts[1].addEventListener("mouseleave", () => {
+        document.querySelector(".img2").style.opacity = 0;
+        document.querySelector(".box2").style.opacity = 0;
+      });
+    </script>
+  </body>
 </html>
